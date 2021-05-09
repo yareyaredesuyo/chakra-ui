@@ -93,7 +93,6 @@ export function useRadio(props: UseRadioProps = {}) {
     isInvalid,
     name,
     value,
-    id,
     ...htmlProps
   } = props
 

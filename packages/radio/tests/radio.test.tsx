@@ -1,7 +1,7 @@
 import * as React from "react"
 import { render, fireEvent, screen } from "@chakra-ui/test-utils"
-import { Radio, useRadio, UseRadioProps } from "../src"
 import { FormControl, FormHelperText, FormLabel } from "@chakra-ui/form-control"
+import { Radio, useRadio, UseRadioProps } from "../src"
 
 test("has proper aria and data attributes", async () => {
   const Component = (props: UseRadioProps = {}) => {

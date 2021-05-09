@@ -17,6 +17,7 @@ interface TableOfContentProps extends BoxProps {
 
 function TableOfContent(props: TableOfContentProps) {
   const { headings, ...rest } = props
+  const headingLinkColor = useColorModeValue("gray.600", "gray.400")
   const activeId = useScrollSpy(
     headings.map(({ id }) => `[id="${id}"]`),
     {
@@ -63,7 +64,7 @@ function TableOfContent(props: TableOfContentProps) {
               fontWeight={id === activeId ? "bold" : "medium"}
               href={`#${id}`}
               aria-current={id === activeId ? "location" : undefined}
-              color={useColorModeValue("gray.600", "gray.400")}
+              color={headingLinkColor}
             >
               {text}
             </chakra.a>
